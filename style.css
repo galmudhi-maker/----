@@ -1,0 +1,550 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --cream: #F8F6F0;
+    --ivory: #F1EBDD;
+    --beige: #E4D8C5;
+    --sand: #C6B394;
+    --brown: #78654D;
+    --dark: #40372C;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    min-height: 78px;
+    padding: 12px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(248,246,240,0.96);
+    border-bottom: 1px solid var(--beige);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Amiri', serif;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--sand);
+}
+
+.nav {
+    display: flex;
+    gap: 26px;
+}
+
+.nav a {
+    font-size: 13px;
+    color: var(--brown);
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--dark);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 680px;
+    padding: 100px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at center, #FFFFFF 0%, #F8F6F0 65%, #EEE5D6 100%);
+}
+
+.hero-decoration {
+    font-size: 85px;
+    color: var(--sand);
+    opacity: 0.45;
+    margin-bottom: 10px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--brown);
+}
+
+.hero h1 {
+    font-family: 'Amiri', serif;
+    font-size: clamp(70px, 12vw, 125px);
+    line-height: 1.3;
+    color: var(--dark);
+    margin: 8px 0;
+}
+
+.hero h1 span,
+.section h2 span {
+    color: var(--sand);
+}
+
+.hero-subtitle {
+    max-width: 530px;
+    font-size: 15px;
+    color: var(--brown);
+    margin-bottom: 30px;
+}
+
+.hero-verse {
+    max-width: 720px;
+    padding: 24px 30px;
+    border-top: 1px solid var(--beige);
+    border-bottom: 1px solid var(--beige);
+    margin-bottom: 30px;
+}
+
+.hero-verse p {
+    font-family: 'Amiri', serif;
+    font-size: clamp(19px, 3vw, 28px);
+    line-height: 2;
+}
+
+.hero-verse span,
+.reference,
+.hadith-source {
+    font-size: 12px;
+    color: var(--brown);
+}
+
+.main-button {
+    background: var(--dark);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 3px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: var(--brown);
+    transform: translateY(-3px);
+}
+
+.main-button span {
+    margin-right: 10px;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 20px;
+    color: var(--brown);
+    font-size: 11px;
+}
+
+.section {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Amiri', serif;
+    font-size: clamp(35px, 5vw, 52px);
+    font-weight: normal;
+    margin: 8px 0 18px;
+}
+
+.section-description {
+    color: var(--brown);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.intro {
+    background: var(--white);
+}
+
+.intro-line {
+    width: 55px;
+    height: 2px;
+    background: var(--sand);
+    margin: 25px auto;
+}
+
+.intro p {
+    max-width: 690px;
+    margin: 15px auto;
+    font-size: 15px;
+    color: var(--brown);
+}
+
+.verses {
+    background: var(--cream);
+}
+
+.verse-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.verse-card {
+    background: var(--white);
+    padding: 35px 28px;
+    border: 1px solid var(--beige);
+    position: relative;
+    transition: 0.35s;
+}
+
+.verse-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(80,60,35,0.08);
+}
+
+.card-number {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: var(--sand);
+    font-size: 12px;
+}
+
+.ornament {
+    color: var(--sand);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.quran {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    line-height: 2;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.card-line {
+    width: 35px;
+    height: 1px;
+    background: var(--sand);
+    margin: 20px auto;
+}
+
+.explanation {
+    color: var(--brown);
+    font-size: 13px;
+}
+
+.sunnah {
+    background: var(--ivory);
+}
+
+.hadith-box {
+    max-width: 780px;
+    margin: 22px auto;
+    padding: 35px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid var(--beige);
+}
+
+.hadith-icon {
+    font-size: 30px;
+    color: var(--sand);
+}
+
+.hadith-text {
+    font-family: 'Amiri', serif;
+    font-size: 27px;
+    margin: 15px 0;
+    line-height: 2;
+}
+
+.hadith-explanation {
+    font-size: 13px;
+    color: var(--brown);
+    margin-bottom: 15px;
+}
+
+.comparison {
+    background: var(--white);
+}
+
+.comparison-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.path-card {
+    text-align: right;
+    padding: 35px;
+    border: 1px solid var(--beige);
+}
+
+.path-card h3 {
+    font-family: 'Amiri', serif;
+    font-size: 31px;
+    margin: 10px 0 20px;
+}
+
+.path-symbol {
+    font-size: 35px;
+    color: var(--sand);
+}
+
+.path-card ul {
+    list-style: none;
+}
+
+.path-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--ivory);
+    font-size: 13px;
+    color: var(--brown);
+}
+
+.path-card li::before {
+    content: "✧";
+    color: var(--sand);
+    margin-left: 10px;
+}
+
+.revenge {
+    background: #F7F3ED;
+}
+
+.forgiveness {
+    background: #F1EBDD;
+}
+
+.important-note {
+    max-width: 800px;
+    margin: 35px auto 0;
+    padding: 17px;
+    background: var(--cream);
+    border-right: 3px solid var(--sand);
+    color: var(--brown);
+    font-size: 13px;
+    text-align: right;
+}
+
+.experience {
+    background: var(--cream);
+}
+
+.scenario-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px 25px;
+    background: var(--white);
+    border: 1px solid var(--beige);
+}
+
+.scenario-text {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.choice {
+    font-family: 'Cairo', sans-serif;
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    padding: 14px;
+    color: var(--dark);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choice:hover {
+    background: var(--ivory);
+    border-color: var(--sand);
+}
+
+.answer {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: var(--ivory);
+    color: var(--brown);
+    font-size: 14px;
+}
+
+.answer.show {
+    display: block;
+    animation: appear 0.4s ease;
+}
+
+.wisdom {
+    background: var(--ivory);
+}
+
+.wisdom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.wisdom-card {
+    padding: 30px 20px;
+    background: var(--white);
+    border: 1px solid var(--beige);
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+}
+
+.wisdom-note {
+    margin-top: 20px;
+    color: var(--brown);
+    font-size: 11px;
+}
+
+.ending {
+    padding: 100px 20px;
+    text-align: center;
+    background: #EAE0D0;
+}
+
+.ending-ornament {
+    font-size: 55px;
+    color: var(--brown);
+}
+
+.ending h2 {
+    font-family: 'Amiri', serif;
+    font-size: 65px;
+    font-weight: normal;
+    color: var(--dark);
+}
+
+.ending > p:not(.section-label) {
+    max-width: 550px;
+    margin: 15px auto;
+    color: var(--brown);
+}
+
+.ending-verse {
+    margin-top: 30px;
+    font-family: 'Amiri', serif;
+    font-size: 27px;
+    color: var(--dark);
+}
+
+.footer {
+    padding: 25px;
+    text-align: center;
+    background: var(--dark);
+    color: var(--cream);
+}
+
+.footer p {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+}
+
+.footer span {
+    font-size: 11px;
+    color: var(--beige);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 12px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 78px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--cream);
+        flex-direction: column;
+        gap: 15px;
+        border-bottom: 1px solid var(--beige);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .verse-grid,
+    .comparison-grid,
+    .wisdom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding-top: 70px;
+    }
+
+    .quran {
+        font-size: 22px;
+    }
+
+    .hadith-box {
+        padding: 25px 18px;
+    }
+}
